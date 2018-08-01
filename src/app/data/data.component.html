@@ -1,0 +1,15 @@
+<div i18n="@@dataContent">
+  数据
+
+  <div class="date-card">
+    <datepicker-range [(date)]="startDate" [(dateRight)]="TodayDate" (dateChange)="getLeft($event)"
+                    [rangeMonth]="1000" (dateRightChange)="getRight($event)" [isSingle]="false"></datepicker-range>
+  </div>
+
+  <h3>测试</h3>
+
+  <div class="date-card">
+    <!--<datepicker [(date)]="startDate" [(dateRight)]="TodayDate" (dateChange)="getLeft($event)"-->
+                      <!--[rangeMonth]="1000" (dateRightChange)="getRight($event)" [isSingle]="false"></datepicker>-->
+  </div>
+</div>

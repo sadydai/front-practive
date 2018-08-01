@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="overview" datatype="html">
+        <source>概览</source>
+         <target>概览</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/base/base.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dataBase" datatype="html">
+        <source>概览2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/base/base.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manageBase" datatype="html">
+        <source>概览4</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/base/base.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dataContent" datatype="html">
+        <source>
+  数据
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/data/data.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

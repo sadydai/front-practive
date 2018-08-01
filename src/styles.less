@@ -1,0 +1,131 @@
+/*
+    全局css
+    *** @ font-family  color  font-size
+    *** @ button-style   input
+    *** @ display flex
+    *** @ animation
+    *** @ icon-font
+
+*/
+
+/**************font-family*****************/
+@base-font: 14px;
+@info-font: 16px;
+@title-font: 26px;
+@small-font: 12px;
+
+// spaceing
+@baseSpace: 8px;
+@iconSize: 6px;
+
+// color
+@baseColor: #4BA3FD;
+@baseHover: fade(@baseColor, 80%);
+
+@baseTextColor: #68728C;
+@baseInfoColor: fade(@baseTextColor, 60%);
+
+body {
+    font-family: "PingFangSC-Light", "Microsoft YaHei", Roboto, Helvetica Neue Light, Tahoma, "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+    margin: 0;
+    font-size: @base-font;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F2F5FA;
+    color: @baseTextColor;
+}
+
+html {
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p, h3, h4, h5, h2, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    box-sizing: border-box;
+    &:focus {
+        box-shadow: none;
+        border: none;
+    }
+}
+
+input[type="test"]:focus, input[type="password"]:focus {
+    border: 1px solid rgba(68, 136, 255, 0.6) !important;
+    box-shadow: 0 0 3px 0 rgba(68, 136, 255, 0.49);
+    outline: none;
+}
+
+input[type='button']:focus {
+    border: none;
+    outline: none;
+}
+
+input[class~='error'] {
+    border: 1px solid #EB5B6C !important;
+    background-color: rgba(235, 91, 108, 0.04) !important;
+}
+
+/***************animation **************/
+.fade-in {
+    animation: show-animation .3s;
+}
+
+@keyframes show-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pop-up {
+    animation: pop-up-animation 200ms;
+}
+
+@keyframes pop-up-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.pop-down {
+    animation: pop-down-animation 200ms;
+}
+
+@keyframes pop-down-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
