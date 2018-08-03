@@ -1,7 +1,16 @@
 <div>
-  基础
-  <a routerLink="/base/overview" i18n="@@overview">概览</a>
-  <a routerLink="/base/data" i18n="@@dataBase">概览2</a>
-  <a routerLink="/base/manage" i18n="@@manageBase">概览4</a>
+  <div class="base-container">
+    基础导航 header
+  </div>
+  <div class="base-side">
+    <a routerLink="/base/overview" i18n="@@overview">导航1</a>
+    <a routerLink="/base/data" i18n="@@dataBase">导航2</a>
+    <a routerLink="/base/manage" i18n="@@manageBase">导航3</a>
+
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
-<router-outlet></router-outlet>
+

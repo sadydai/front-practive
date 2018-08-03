@@ -495,7 +495,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
             '8月', '9月', '10月', '11月', '12月'
         ];
         // listeners
-        this.clickListener = renderer.listenGlobal('document', 'click', (event: MouseEvent) => this.handleGlobalClick(event));
+        this.clickListener = renderer.listenGlobal('document', 'click', (event) => this.handleGlobalClick(event));
     }
 
     ngOnInit() {
@@ -722,13 +722,14 @@ export class DatepickerComponent implements OnInit, OnChanges {
 
     // Listeners
     // ------------------------------------------------------------------------------------
-    handleGlobalClick(event: MouseEvent): void {
+    handleGlobalClick(event): void {
         // 源码nativeElement 的type 有bug 这里无须处理
-        if (!this.elementRef.nativeElement.contains(event.target) && event.target.dataset.i !== 'sa-i') {
-            this.closeCalendar();
-            this.showCalendarRight = false;
+        if (!this.elementRef.nativeElement.contains(event.target) ) {
+            if( event.target.dataset &&event.target.dataset.i !== 'sa-i'){
+                this.closeCalendar();
+                this.showCalendarRight = false;
+            }
         };
-        // console.log(this.elementRef.nativeElement)
     }
 
     // Helpers

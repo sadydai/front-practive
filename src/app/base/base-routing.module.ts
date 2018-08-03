@@ -19,6 +19,10 @@ const routes: Routes = [
             {
                 path: 'data',
                 loadChildren: '../data/data.module#DataModule'
+            },
+            {
+                path:'',
+                loadChildren: '../overview/overview.module#OverviewModule'
             }
 
         ]

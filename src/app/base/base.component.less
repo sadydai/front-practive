@@ -1,3 +1,30 @@
-p{
-    color: red;
+
+@base-height: 45px;
+@base-side-width:120px;
+@base-padding: 35px;
+
+@import "../../assets/css/font";
+@import "../../assets/css/color";
+.base-container{
+    width: 100%;
+    z-index: 999;
+    height: @base-height;
+    line-height: @base-height;
+    background-color: @baseColor;
+    color: white;
+}
+.base-side{
+    position: fixed;
+    height: 100%;
+    width: @base-side-width;
+    background: white;
+    overflow: auto;
+    padding-bottom: 2*@base-height;
+    a{
+        display: block;
+    }
+}
+.container{
+    margin-left: @base-side-width;
+    padding: @base-padding;
 }
