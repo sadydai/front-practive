@@ -9,8 +9,8 @@ export class DataComponent implements OnInit {
 
 
   constructor() { }
-  private  startDate;
-  private TodayDate;
+   startDate;
+   TodayDate;
 
 
   ngOnInit() {
