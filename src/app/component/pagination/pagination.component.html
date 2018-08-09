@@ -1,0 +1,17 @@
+<div>
+	<div class="page-normal" (click)="handleClick('back')" [ngClass]="{'page-disable': leftDisable}">
+		<svg viewBox="0 0 24 24" class="page-svg">
+			<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+		</svg>
+	</div>
+	<div class="page-normal"  [ngClass]="{active: currentPage === 1}" (click)="handleClick(1)">1</div>
+	<div *ngIf="totalPageCount > 5 && currentPage - 1 >= 4" class="page-normal dot"> ... </div>
+	<div *ngFor ="let item of pageList" (click)="handleClick(item)" class="page-normal" [ngClass]="{active: currentPage === item}">{{ item }}</div>
+	<div *ngIf="totalPageCount > 5 && totalPageCount - currentPage >= 4" class="page-normal dot">...</div>
+	<div class="page-normal r" (click)="handleClick(totalPageCount)" [ngClass]="{active: currentPage === totalPageCount}" *ngIf="totalPageCount !== 1">{{ totalPageCount }}</div>
+	<div class="page-normal" (click)="handleClick('forward')" [ngClass]="{'page-disable': rightDisable}">
+		<svg viewBox="0 0 24 24" class="page-svg">
+			<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+		</svg>
+	</div>
+</div>

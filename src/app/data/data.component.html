@@ -2,8 +2,8 @@
   数据
 
   <div class="date-card">
-    <datepicker-range [(date)]="startDate" [(dateRight)]="TodayDate" (dateChange)="getLeft($event)"
-                    [rangeMonth]="1000" (dateRightChange)="getRight($event)" [isSingle]="false"></datepicker-range>
+    <app-datepicker-range [(date)]="startDate" [(dateRight)]="TodayDate" (dateChange)="getLeft($event)"
+                    [rangeMonth]="1000" (dateRightChange)="getRight($event)" [isSingle]="false"></app-datepicker-range>
   </div>
 
   <h3>测试</h3>
@@ -12,4 +12,11 @@
     <!--<datepicker [(date)]="startDate" [(dateRight)]="TodayDate" (dateChange)="getLeft($event)"-->
                       <!--[rangeMonth]="1000" (dateRightChange)="getRight($event)" [isSingle]="false"></datepicker>-->
   </div>
+
+  <div>
+    <button (click)="setpage(20)"> 更改为page20</button>
+    <h3>pagination测试</h3>
+      <app-pagination [total]="pagetotal" [current]="currentpage" (pageChange)= 'handlePageChange($event)'></app-pagination>
+  </div>
+
 </div>

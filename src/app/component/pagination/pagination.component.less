@@ -1,0 +1,36 @@
+@import "../../../assets/css/color";
+
+@page-item-size: 32px;
+
+.page-normal {
+    display: inline-block;
+    width: @page-item-size;
+    height: @page-item-size;
+    line-height: @page-item-size;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0 4px;
+}
+.page-normal:hover{
+    background-color: fade(@baseInfoColor , 20%);
+}
+.page-normal.active{
+    background: @baseColor;
+    color: white;
+}
+.page-disable {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: fade(@baseInfoColor, 30%);
+}
+.page-svg{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    fill: currentColor;
+}
+.dot{
+    pointer-events: none;
+}

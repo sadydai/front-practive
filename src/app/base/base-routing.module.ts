@@ -21,7 +21,7 @@ const routes: Routes = [
                 loadChildren: '../data/data.module#DataModule'
             },
             {
-                path:'',
+                path: '',
                 loadChildren: '../overview/overview.module#OverviewModule'
             }
 
