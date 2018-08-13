@@ -1,7 +1,6 @@
-# FrontPractive
+# FrontPractive 
 
-angular cli 生成文件
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## 该项目是angular version 6.1.0， 使用angular cli 快速生成文件 
 
 
 ## Development server  启动服务
@@ -54,6 +53,14 @@ ng generate component ** 创建一个component
 
 ###todo list
 
+ 
+|todo说明 |进度 |
+|:------|:---|
+|http请求 | ok |
+|路由守卫 | ok|
+|国际化| 暂时生成不同项目ok |
+|
+
 
 1. http  请求  //done
 2. 3层路由测试与组件之间的通讯
@@ -64,12 +71,10 @@ ng generate component ** 创建一个component
 7. 共用组件（例：radio / modelBox ）
 8. pipe directive 编写
 9. 组件1，时间选择； ok
-   组件2：分页 ； 
+   组件2：分页  ok； 
    组件3； radio ；
    组件4：modelBox；
    组件5：loading 
-
-
 
 
 
