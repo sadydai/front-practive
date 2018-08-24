@@ -18,9 +18,23 @@ export class RadioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log()
   }
   Isdisable: boolean;
   @Input() label: any;
   @Input() groupName: string;
   @Input() disabled: boolean;
+  @Input() isChecked: boolean;
+
+
+  getChoose(e){
+    // 获取所有group下的input
+    this.isChecked = e.target.checked
+  }
+
+  findComponentUpward (context, componentName, componentNames) {
+
+  }
+
 }
+

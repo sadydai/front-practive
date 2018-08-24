@@ -2,12 +2,12 @@
   <h3>
     单选框
   </h3>
-  <label class="radio-wrapper">
-      <span class="">
+  <label class="radio-wrapper"  for="{{label}}">
+      <span  [ngClass]="{'radio-checked': isChecked}">
 		  <span class="radio-inner"></span>
-		  <span class="radio-current"></span>
+		  <span class="radio-correct"></span>
       </span>
-      <input type="radio" [attr.name]="groupName" [disabled]="disabled">
+      <input type="radio" [attr.name]="groupName" [disabled]="disabled" id="{{label}}" (click)="getChoose($event)">
       <span>
         {{ label }}
       </span>

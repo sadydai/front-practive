@@ -1,6 +1,8 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {AppService} from './app.service';
 
+import docCookies from '../assets/js/cookies.js'
+
 @Component({
     selector: 'app-root',
     // encapsulation: ViewEncapsulation.None,
@@ -13,7 +15,12 @@ export class AppComponent implements OnInit {
     getAuth() {
         this.AuthHttp.isAuth()
             .subscribe((res) => {
-                console.log(res['status']);
+                // 判断是否登录
+                if(res['status'] === 1){
+                    let user = res['data'].loginname;
+                    console.log(user);
+                    docCookies.setItem('user_alias', user)
+                }
 
             });
     }

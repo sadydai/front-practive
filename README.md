@@ -55,11 +55,17 @@ ng generate component ** 创建一个component
 
  
 |todo说明 |进度 |
-|:------|:---|
+|:------|:--- |
 |http请求 | ok |
 |路由守卫 | ok|
 |国际化| 暂时生成不同项目ok |
-|
+|路由组件之间的通讯|waiting|
+|组件时间选择| OK|
+|分页|OK|
+|radio| waiting|
+|模态框| waiting|
+|loading | waiting|
+
 
 
 1. http  请求  //done
@@ -75,9 +81,6 @@ ng generate component ** 创建一个component
    组件3； radio ；
    组件4：modelBox；
    组件5：loading 
-
-
-
 
 
 

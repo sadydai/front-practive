@@ -4,22 +4,25 @@
 import {Injectable} from '@angular/core';
 import {CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
 
+
+import docCookies from '../../assets/js/cookies.js';
+
+
 @Injectable()
 
 export class AuthGuard implements CanActivate {
     private session =  document.cookie.replace(/(?:(?:^|.*;\s*)session_id\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+    private user = docCookies.getItem('user_alias');
     constructor(private router: Router) {
     }
 
     canActivate() {
-        console.log('路由守卫');
-        console.log(this.session);
-        return this.checkIsLogged(this.session);
+        return this.checkIsLogged(this.session,this.user);
     }
 
     // 判断是否登录 否则返回login
-    checkIsLogged(data: any) {
-        if (data) {
+    checkIsLogged(data: any,user: string) {
+        if (data || user) {
             return true;
         }
         this.router.navigate(['/login']);
@@ -28,7 +31,7 @@ export class AuthGuard implements CanActivate {
 
     // canLoad
     canLoad() {
-        if (!this.session) {
+        if (!this.session && !this.user) {
             return true;
         }
         this.router.navigate(['/base']);

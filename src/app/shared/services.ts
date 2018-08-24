@@ -13,7 +13,7 @@ export class ShareHttp {
     }
 
     // domain = '';
-    domain = 'http://localhost:9090';
+    domain = 'http://192.168.1.87:9090';
 
     get(url) {
         const newUrl = this.domain + url;
